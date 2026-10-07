@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Areana Inclusiva </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#12233D; --navy-deep:#0C1A2E; --chalk:#F5F6F2; --clay:#E24E1B; --ink:#101820; --line:#C9CCC5; --white:#FFFFFF;
+    box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Inter', Arial, sans-serif; color:var(--ink); background:var(--chalk); line-height:1.5;}
+  h1,h2,h3{font-family:'Bebas Neue', Impact, sans-serif; line-height:1; color:var(--navy);}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--clay); outline-offset:2px;}
+
+  .btn{display:inline-flex; align-items:center; padding:13px 24px 13px 20px; font-weight:600; font-size:0.95rem; clip-path:polygon(0 0,100% 0,100% 70%,90% 100%,0 100%); border:none; cursor:pointer;}
+  .btn-primary{background:var(--clay); color:var(--white);}
+  .btn-ghost{background:transparent; color:var(--chalk); border-bottom:2px solid rgba(245,246,242,.4);}
+
+  header{background:var(--navy-deep); padding-top:env(safe-area-inset-top,0px);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:1080px; margin:0 auto;}
+  .logo{font-family:'Bebas Neue'; font-size:1.4rem; color:var(--chalk);}
+  .logo span{color:var(--clay); transform:skewX(-12deg); display:inline-block;}
+  .nav-links{display:flex; gap:24px;}
+  .nav-links a{color:#D8DCE3; font-size:0.9rem;}
+
+  .hero{position:relative; background:var(--navy); color:var(--chalk); overflow:hidden; padding:80px 0 96px;}
+  .hero .wrap{position:relative; z-index:2;}
+  .lanes{position:absolute; inset:0; opacity:.5;}
+  .hero h1{color:var(--chalk); font-size:clamp(2.4rem,6vw,3.8rem); max-width:14ch;}
+  .hero p{max-width:48ch; color:#C7CDD6; margin-top:18px; font-size:1.05rem;}
+  .hero-ctas{display:flex; gap:14px; margin-top:28px; flex-wrap:wrap;}
+
+  section{padding:70px 0;}
+  .section-head{margin-bottom:36px;}
+  .section-head h2{font-size:clamp(1.8rem,4vw,2.3rem);}
+  .section-head p{color:#565F5B; margin-top:8px; max-width:50ch;}
+
+  .sports-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .sport-card{background:var(--navy); color:var(--chalk); clip-path:polygon(0 0,100% 0,100% 90%,88% 100%,0 100%); padding:22px 20px 26px; display:flex; flex-direction:column; gap:10px; min-height:150px;}
+  .tag{align-self:flex-start; font-size:0.68rem; font-weight:600; color:var(--navy-deep); background:var(--chalk); padding:3px 9px 3px 7px; clip-path:polygon(0 0,100% 0,90% 100%,0 100%);}
+  .sport-card h3{font-size:1.1rem; color:var(--chalk);}
+  .sport-card p{color:#B9C1CA; font-size:0.86rem;}
+
+  footer{background:var(--ink); color:#9AA1A8; padding:34px 0; font-size:0.85rem;}
+  .foot-row{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+
+  @media (max-width:760px){
+    .nav-links{display:none;}
+    .sports-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:480px){ .sports-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="#">ARENA<span>Influsiva
+    <div class="nav-links">
+      <a href="#esportes">Esportes</a>
+      <a href="#">Notícias</a>
+      <a href="#">Onde assistir</a>
+    </div>
+    <a class="btn btn-ghost" href="#">Entrar</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <svg class="lanes" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+    <polygon points="700,0 900,0 500,400 300,400" fill="#16294a"/>
+    <polygon points="900,0 1000,0 600,400 500,400" fill="#0f1e37"/>
+  </svg>
+  <div class="wrap">
+    <h1>O esporte também se adapta a você.</h1>
+    <p>Crie sua conta, responda um questionário rápido e sua home mostra os esportes adaptados feitos para o seu perfil.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#">Criar conta</a>
+      <a class="btn btn-ghost" href="#esportes">Ver esportes</a>
+    </div>
+  </div>
+</section>
+
+<section id="esportes">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Esportes em destaque</h2>
+      <p>Prévia da home — depois do questionário, esta lista se ajusta ao seu perfil.</p>
+    </div>
+    <div class="sports-grid">
+      <article class="sport-card"><span class="tag">Físico</span><h3>Basquete em cadeira de rodas</h3><p>Regras, classificação e times do campeonato nacional.</p></article>
+      <article class="sport-card"><span class="tag">Visual</span><h3>Goalball</h3><p>Guiado inteiramente pelo som da bola.</p></article>
+      <article class="sport-card"><span class="tag">Todos</span><h3>Atletismo paralímpico</h3><p>Provas e classes esportivas em pista e campo.</p></article>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <span>© 2026 AreanaInclusiva</span>
+    <span>Protótipo — apenas a home</span>
+  </div>
+</footer>
+
+</body>
+</html>
