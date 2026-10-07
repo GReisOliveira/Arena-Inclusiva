@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Editors and local configuration
+.vscode/
+.idea/
+
+# JavaScript dependencies
+node_modules/
